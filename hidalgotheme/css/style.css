@@ -1,0 +1,49 @@
+/**
+ * Place your custom styles here.
+ */
+
+.navbar-default {
+    font-size: 20px;
+    background-color: rgba(248, 248, 248, 1);
+    background: -webkit-linear-gradient(top, rgba(230, 230, 230, 1) 0%, rgba(248, 248, 248, 1) 100%);
+    background: linear-gradient(to bottom, rgba(230, 230, 230, 1) 0%, rgba(248, 248, 248, 1) 100%);
+    border-bottom-width: 2px;
+}
+
+/* En caso de que se añadan entradas al menú principal 
+seguramente habrá que variar el min width*/
+@media  (min-width: 767px){
+	nav#block-hidalgotheme-main-menu {
+		position: relative;
+		top: 25px;
+		left: 7px;
+		float: left;
+		vertical-align: middle;
+	}
+}
+
+nav#block-hidalgotheme-main-menu {
+	position: relative;
+	left: 7px;
+	font-size: 22px;
+}
+
+h1 {
+	font-size: 45px;
+	color: #2196f3;
+}
+
+h2 {
+	font-size: 39px;
+	color: #2196f3;
+}
+
+h3 {
+	font-size: 32px;
+	color: #2196f3;
+}
+
+.progress {background: rgba(210, 152, 224, 1); border: 0px solid rgba(245, 245, 245, 1); border-radius: 4px; height: 20px;}
+.progress-bar-custom {background: rgba(149, 22, 181, 1);} 
+.progress-striped .progress-bar-custom {background-color: rgba(149, 22, 181, 1); background-image: -webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255, 255, 255, 0.15),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255, 255, 255, 0.15)),color-stop(0.75,rgba(255, 255, 255, 0.15)),color-stop(0.75,transparent),to(transparent))); background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-image: linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-size: 40px 40px;}
+

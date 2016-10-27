@@ -1,0 +1,48 @@
+<!-- las etiquetas <dt> corresponde con lo que se mostrará normalmente; las <dd> con el texto oculto --><!DOCTYPE HTML><html lang="en-US"><head>
+<meta charset="UTF-8"><title></title><style type="text/css">
+		*{ font-family: margin: 0;}
+		dl{ margin: 30px auto; width: 100%; }
+		dt, dd{ padding: 20px; border-radius: 15px; }
+		dt{ border-bottom: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF; cursor: pointer; text-top; text-align: left; }
+		dd{ background: #f9f9f9; line-height: 1.6em; }
+		dt.activo, dt:hover{ background: #f9f9f9; }
+		dt:before{ content: "▸ "; margin-right: 10px; }
+		dt.activo:before{ content: "▾ "; }
+</style></head><body>
+
+
+
+<dl>
+<dt>
+    <font size=+1><b>{{ fields.title.content }}</b></font><br>
+    &nbsp; &nbsp; &nbsp; &nbsp; (El día {{  fields.created.label }} {{ fields.created.content }})
+    {{ fields.field_image.content }}
+</dt>
+
+<dd>
+	{{ fields.body.content }}
+  <div style="float:right;"><a class="btn btn-primary btn-sm" href=" {{ fields.path.content }} " role="button">Leer completo</a></div>
+  <br>
+</dd>
+
+</dl>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript">
+	  $('dl dd').not('dt.activo + dd').hide();
+       $('dl dt').click(function(){
+          if ($(this).hasClass('activo')) {
+               $(this).removeClass('activo');
+               $(this).next().slideUp();
+          } else {
+               $('dl dt').removeClass('activo');
+               $(this).addClass('activo');
+               $('dl dd').slideUp();
+               $(this).next().slideDown();
+          }
+       });
+	</script>
+</body>
+</body>
+

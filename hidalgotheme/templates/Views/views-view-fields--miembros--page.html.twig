@@ -1,0 +1,73 @@
+<!-- las etiquetas <dt> corresponde con lo que se mostrará normalmente; las <dd> con el texto oculto -->
+<!DOCTYPE HTML><html lang="en-US"><head>
+<meta charset="UTF-8"><title></title><style type="text/css">
+		*{ font-family: margin: 0;}
+		dl{ margin: 30px auto; width: 100%; }
+		dt, dd{ padding: 20px; border-radius: 15px; }
+		dt{ border-bottom: 1px solid #FFFFFF; border-top: 1px solid #FFFFFF; cursor: pointer; text-top; text-align: left; }
+		dd{ background: #f9f9f9; line-height: 1.6em; }
+		dt.activo, dt:hover{ background: #f9f9f9; }
+		dt:before{ content: "▸ "; margin-right: 10px; }
+		dt.activo:before{ content: "▾ "; }
+</style></head><body>
+
+
+
+<dl>
+<dt>
+    <font size=+1><b>{{ fields.field_nombremostrar.content }}</b></font><br>
+    <div style=" margin: auto; ">{{ fields.user_picture.content }}</div>    
+    {{ fields.usuario_equipo.label }} {{ fields.usuario_equipo.content }}
+</dt>
+
+<dd>
+  	{{ fields.field_bio.content }}
+    
+    <span class="fa-stack fa-lg" style="width: 25%; font-size:180%; float: left;">
+      <a href=" {{ field_twitter }} " target="_blank" style="color: #00aced;">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x"></i>
+      </a>
+    </span>
+    <span class="fa-stack fa-lg" style="width: 25%; font-size:180%; float: left;">
+      <a href=" {{ field_linkedin }} " target="_blank" style="color: #007bb6;">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-linkedin fa-stack-1x"></i>
+      </a>
+    </span>
+    <span class="fa-stack fa-lg" style="width: 25%; font-size:180%; float: left;">
+      <a href=" {{ field_google }} " target="_blank" style="color: #dd4b39; ">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-google-plus fa-stack-1x" style="font-size:0.8em"></i>
+      </a>
+    </span>
+    <span class="fa-stack fa-lg" style="width: 25%; font-size:180%; float: left;">
+      <a href=" {{ field_instagram }} " target="_blank" style="color: #517fa4;">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-instagram fa-stack-1x"></i>
+      </a>
+    </span>
+    <br>
+    <br>
+</dd>
+</dl>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript">
+	  $('dl dd').not('dt.activo + dd').hide();
+       $('dl dt').click(function(){
+          if ($(this).hasClass('activo')) {
+               $(this).removeClass('activo');
+               $(this).next().slideUp();
+          } else {
+               $('dl dt').removeClass('activo');
+               $(this).addClass('activo');
+               $('dl dd').slideUp();
+               $(this).next().slideDown();
+          }
+       });
+	</script>
+</body>
+</body>
+
